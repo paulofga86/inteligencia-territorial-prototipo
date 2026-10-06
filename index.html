@@ -502,7 +502,7 @@ select.field.empty{color:var(--placeholder)}
     <section class="view ws" id="v-analise">
       <aside class="rail" aria-label="Análises e conversa">
         <div class="rail-top">
-          <button class="btn btn-outline btn-sm" data-go="nova" id="rail-nova"></button>
+          <button class="btn btn-outline btn-sm" data-go="analises" id="rail-voltar"></button>
           <button class="hist-h" id="hist-toggle" aria-expanded="true" aria-controls="hist"><span id="hist-label">Análises</span><span data-i="chevD"></span></button>
         </div>
         <div class="hist" id="hist"></div>
@@ -935,7 +935,7 @@ function resetNova(){
 let cur=null,tab='visao',wsMap=null,tabLayers=[],hlLayer=null,selImovel=null;
 const TABS=[{id:'visao',t:'Visão geral'},{id:'uso',t:'Ocupação do solo'},{id:'fund',t:'Situação fundiária'},{id:'socio',t:'Situação socioambiental'}];
 const threads={};
-$('#rail-nova').innerHTML=ic('plus')+'Nova análise';
+$('#rail-voltar').innerHTML=ic('chevL')+'Voltar para a lista de análises';
 $('#export').innerHTML=ic('file')+'Exportar relatório';
 $('#export').onclick=()=>toast('Relatório PDF da análise '+cur.id+' gerado (simulação).','ok','Relatório exportado');
 $('#hist-toggle').onclick=()=>{const b=$('#hist-toggle'),o=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',String(!o));$('#hist').hidden=o};
